@@ -42,6 +42,7 @@ import org.telegram.messenger.ImageReceiver;
 import org.telegram.messenger.LocaleController;
 import org.telegram.messenger.MessageObject;
 import org.telegram.messenger.MessagesController;
+import org.telegram.messenger.SendMessagesHelper;
 import org.telegram.messenger.alexgor.R;
 import org.telegram.messenger.UserConfig;
 import org.telegram.messenger.UserObject;
@@ -894,7 +895,7 @@ public class ShareView extends ViewGroup
                 this.undoView = new UndoView(userCell);
                 ArrayList<MessageObject> messages = new ArrayList<>();
                 messages.add(this.cell.getMessageObject());
-//            int result = SendMessagesHelper.getInstance(currentAccount).sendMessage(messages, cell.dialog.id, true,false, false, 0, null);
+                int result = SendMessagesHelper.getInstance(currentAccount).sendMessage(messages, userCell.dialog.id, true,false, false, 0, null);
 
                 this.hideAnimation(null);
 
