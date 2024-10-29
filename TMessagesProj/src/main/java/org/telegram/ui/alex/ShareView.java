@@ -409,9 +409,7 @@ public class ShareView extends ViewGroup
                 boolean useDown = this.testSelctedSell(e.getX(), e.getY());
                 if(!useDown)
                 {
-                    Control[] controls = new Control[this.visibleControls.size()];
-                    this.visibleControls.toArray(controls);
-                    for (Control control : controls)
+                    for (Control control : this.visibleControls)
                     {
                         if (control.undoView != null)
                         {
